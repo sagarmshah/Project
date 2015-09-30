@@ -1,0 +1,94 @@
+<html xmlns:o="urn:schemas-microsoft-com:office:office"
+    xmlns:x="urn:schemas-microsoft-com:office:word"
+    xmlns="http://www.w3.org/TR/REC-html40">
+
+    <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+    <html>
+    <head>
+        <meta http-equiv="Content-type" content="text/html;charset=utf-8" />
+    </head>
+    <body><h1>Database sayipl1</h1><h2>Table structure for table schedule</h2><table class="width100" cellspacing="1"><tr class="print-category"><th class="print">Column</th><td class="print"><b>Type</b></td><td class="print"><b>Null</b></td><td class="print"><b>Default</b></td></tr><tr class="print-category"><td class="print"><i><b>id</b></i></td><td class="print">int(12)</td><td class="print">No</td><td class="print"></td></tr><tr class="print-category"><td class="print">aside</td><td class="print">varchar(50)</td><td class="print">No</td><td class="print"></td></tr><tr class="print-category"><td class="print">content</td><td class="print">text</td><td class="print">No</td><td class="print"></td></tr></table><h2>Dumping data for table schedule</h2><table class="width100" cellspacing="1"><tr class="print-category"><td class="print">1</td><td class="print">MI/Images/mi-players-collage-new.png</td><td class="print">                                    &lt;tr&gt;
+    &lt;th scope=&quot;col&quot;&gt;&lt;h2&gt;MATCH&lt;/h2&gt;&lt;/th&gt;
+    &lt;th scope=&quot;col&quot;&gt;&lt;h2&gt;DATE&lt;/h2&gt;&lt;/th&gt;
+    &lt;th scope=&quot;col&quot;&gt;&lt;h2&gt;TIME&lt;/h2&gt;&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;RCB vs MI&lt;/td&gt;
+    &lt;td&gt;04/04/2013&lt;/td&gt;
+    &lt;td&gt;8:00pm&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;CSK vs MI&lt;/td&gt;
+    &lt;td&gt;06/04/2013&lt;/td&gt;
+    &lt;td&gt;8:00pm&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;MI vs DD&lt;/td&gt;
+    &lt;td&gt;09/04/2013&lt;/td&gt;
+    &lt;td&gt;8:00pm&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;MI vs PWI&lt;/td&gt;
+    &lt;td&gt;13/04/2013&lt;/td&gt;
+    &lt;td&gt;4:00pm&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;tr&gt;
+    &lt;td&gt;RR vs MI&lt;/td&gt;
+    &lt;td&gt;17/04/2013&lt;/td&gt;
+    &lt;td&gt;8:00pm&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;tr&gt;
+    &lt;td&gt;DD vs MI&lt;/td&gt;
+    &lt;td&gt;21/04/2013&lt;/td&gt;
+    &lt;td&gt;4:00pm&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;tr&gt;
+    &lt;td&gt;KKR vs MI&lt;/td&gt;
+    &lt;td&gt;24/04/2013&lt;/td&gt;
+    &lt;td&gt;8:00pm&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;tr&gt;
+    &lt;td&gt;MI vs RCB&lt;/td&gt;
+    &lt;td&gt;27/04/2013&lt;/td&gt;
+    &lt;td&gt;8:00pm&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;tr&gt;
+    &lt;td&gt;MI vs KXIP&lt;/td&gt;
+    &lt;td&gt;29/04/2013&lt;/td&gt;
+    &lt;td&gt;8:00pm&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;tr&gt;
+    &lt;td&gt;HYD vs MI&lt;/td&gt;
+    &lt;td&gt;01/05/2013&lt;/td&gt;
+    &lt;td&gt;4:00pm&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;tr&gt;
+    &lt;td&gt;MI vs CSK&lt;/td&gt;
+    &lt;td&gt;05/05/2013&lt;/td&gt;
+    &lt;td&gt;4:00pm&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;tr&gt;
+    &lt;td&gt;MI vs KKR&lt;/td&gt;
+    &lt;td&gt;07/05/2013&lt;/td&gt;
+    &lt;td&gt;8:00pm&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;tr&gt;
+    &lt;td&gt;PWI vs MI&lt;/td&gt;
+    &lt;td&gt;11/05/2013&lt;/td&gt;
+    &lt;td&gt;4:00pm&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;tr&gt;
+    &lt;td&gt;MI vs HYD&lt;/td&gt;
+    &lt;td&gt;13/05/2013&lt;/td&gt;
+    &lt;td&gt;8:00pm&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;tr&gt;
+    &lt;td&gt;MI vs RR&lt;/td&gt;
+    &lt;td&gt;15/05/2013&lt;/td&gt;
+    &lt;td&gt;8:00pm&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;tr&gt;
+    &lt;td&gt;KXIP vs MI&lt;/td&gt;
+    &lt;td&gt;18/05/2013&lt;/td&gt;
+    &lt;td&gt;4:00pm&lt;/td&gt;
+  &lt;/tr&gt;</td></tr></table><h2>Table structure for table schedule</h2><table class="width100" cellspacing="1"><tr class="print-category"><th class="print">Column</th><td class="print"><b>Type</b></td><td class="print"><b>Null</b></td><td class="print"><b>Default</b></td></tr><tr class="print-category"><td class="print"><i><b>id</b></i></td><td class="print">int(12)</td><td class="print">No</td><td class="print"></td></tr><tr class="print-category"><td class="print">aside</td><td class="print">varchar(50)</td><td class="print">No</td><td class="print"></td></tr><tr class="print-category"><td class="print">content</td><td class="print">text</td><td class="print">No</td><td class="print"></td></tr></table></body></html>

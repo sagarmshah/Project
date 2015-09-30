@@ -1,0 +1,13 @@
+<html xmlns:o="urn:schemas-microsoft-com:office:office"
+    xmlns:x="urn:schemas-microsoft-com:office:word"
+    xmlns="http://www.w3.org/TR/REC-html40">
+
+    <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+    <html>
+    <head>
+        <meta http-equiv="Content-type" content="text/html;charset=utf-8" />
+    </head>
+    <body><h1>Database sayipl1</h1><h2>Table structure for table about</h2><table class="width100" cellspacing="1"><tr class="print-category"><th class="print">Column</th><td class="print"><b>Type</b></td><td class="print"><b>Null</b></td><td class="print"><b>Default</b></td></tr><tr class="print-category"><td class="print"><i><b>id</b></i></td><td class="print">int(12)</td><td class="print">No</td><td class="print"></td></tr><tr class="print-category"><td class="print">content</td><td class="print">text</td><td class="print">No</td><td class="print"></td></tr><tr class="print-category"><td class="print">title</td><td class="print">text</td><td class="print">No</td><td class="print"></td></tr></table><h2>Dumping data for table about</h2><table class="width100" cellspacing="1"><tr class="print-category"><td class="print">1</td><td class="print">   Usha Pravin Gandhi College of Management,&lt;br&gt;
+    Bhaktivedanta Swami Marg,&lt;br&gt;
+    Vile Parle West,&lt;br&gt;
+  Mumbai.</td><td class="print">All the ipl fans can connect at sayipl.com. We would love to hear your reviews on our website. Email us at &lt;a href=&quot;mailto: sayipl@gmail.com&quot;&gt;sayipl(at)gmail(dot)com&lt;/a&gt;..</td></tr></table><h2>Table structure for table about</h2><table class="width100" cellspacing="1"><tr class="print-category"><th class="print">Column</th><td class="print"><b>Type</b></td><td class="print"><b>Null</b></td><td class="print"><b>Default</b></td></tr><tr class="print-category"><td class="print"><i><b>id</b></i></td><td class="print">int(12)</td><td class="print">No</td><td class="print"></td></tr><tr class="print-category"><td class="print">content</td><td class="print">text</td><td class="print">No</td><td class="print"></td></tr><tr class="print-category"><td class="print">title</td><td class="print">text</td><td class="print">No</td><td class="print"></td></tr></table></body></html>

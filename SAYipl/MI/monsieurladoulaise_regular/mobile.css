@@ -1,0 +1,14 @@
+@charset "utf-8";
+
+section {
+	top: 260px;
+	width: 90%;
+	background-color:rgba(0,0,102,1);
+	right: 5%;
+	left: 5%;
+}
+
+header {
+	width: 450px;
+}
+

@@ -1,0 +1,83 @@
+body {
+	background-color: rgba(204,255,255,1);
+	background-repeat: repeat;
+	background-size: cover;
+}
+h3 {
+	font-size: 16px;
+	color: rgba(255,255,255,1);
+	font-weight: normal;
+	font-family: "MS Serif", "New York", serif;
+}
+h1 {
+	font-size: 32px;
+	color: rgba(255,181,67,1);
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	text-transform: uppercase;
+	}
+a:link {
+	color: rgba(255,255,255,1);
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+a {
+	font-style: normal;
+}
+nav {
+	position: absolute;
+	left: 0%;
+	top: 160px;
+	width: 100%;
+	height: 35px;
+	z-index: 2;
+	background-color: #FFB543;
+	text-align: right;
+}
+h2 {
+	color: rgba(255,255,255,1);
+}
+header {
+	position: absolute;
+	left: 0%;
+	top: 0%;
+	width: 1200px;
+	height: 160px;
+	z-index: 5;
+	background-image: url(../Images/final-mi-header-png.png);
+	background-repeat: repeat;
+}
+footer {
+	position: absolute;
+	left: 0px;
+	top: 950px;
+	width: 100%;
+	height: 150px;
+	background-image: url(../Images/m1-footer.png);
+	background-repeat: repeat;
+	opacity: 0.9;
+	z-index: auto;
+}
+section {
+	position: relative;
+	top: 230px;
+	width: 60%;
+	background-color: rgb(0,111,149);
+	padding: 10px;
+	border-radius: 0px 30px 0px 30px;
+	float: right;
+	right: 5%;
+	z-index: 10;
+	color: rgba(0,0,0,1);
+}
+aside {
+	position: relative;
+	left: 3%;
+	top: 230px;
+	width: 35%;
+	z-index: 10;
+	background-repeat: no-repeat;
+	float: left;
+	padding: 10px;
+}

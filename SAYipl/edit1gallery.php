@@ -1,0 +1,436 @@
+<?php
+session_start();
+?>
+<?php
+	
+	if(!isset($_SESSION['user_id']))
+	{
+		header("location: http://localhost:/SAYipl/login/mysignin.php");
+	}
+?>
+<?php 
+
+include('connection.php');
+?>
+
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<title>Welcome To SAYIPL.com</title>
+<style type="text/css">
+@import url("MI/monsieurladoulaise_regular/stylesheet.css");
+</style>
+<!-- mobile -->
+<link href="MI/monsieurladoulaise_regular/mobile.css" rel="stylesheet" type="text/css" media="only screen and (max-width:800px)">
+<link href="MI/SpryAssets/SpryMenuBarHorizontal.css" rel="stylesheet" type="text/css">
+<script src="MI/SpryAssets/SpryMenuBar.js" type="text/javascript"></script>
+<script src="MI/js/clearbox.js" type="text/javascript"></script>
+<script src="MI/includes/jquery-1.4.2.js" type="text/javascript"></script>
+<script src="MI/jQuery/js/jquery.jsocial.js" type="text/javascript"></script>
+<style type="text/css">
+/* BeginOAWidget_Instance_2648024: #OAWidget */
+.container {
+	width: 100%;
+	height: 100px;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 20px;
+	margin-bottom: 5px;
+	font-size: 11px;
+      }
+      
+      
+      .item a img {
+	float: left;
+	padding: 3px;
+	background-color: #000;
+	margin: 5px;
+	border: 1px solid #cccccc;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-khtml-border-radius: 3px;
+	border-radius: 3px;
+	-moz-box-shadow: 0 0 5px rgba(0,0,0,0.45),0px 1px 2px rgba(0,0,0,0.2);
+	-webkit-box-shadow: 0 0 5px rgba(0,0,0,0.45),0px 1px 2px rgba(0,0,0,0.2);
+	box-shadow: 0 0 5px rgba(0,0,0,0.45),0px 1px 2px rgba(0,0,0,0.2);
+	filter: alpha(opacity=100);
+	-moz-opacity: 1;
+	-khtml-opacity: 1;
+	opacity: 0.6;
+      }
+      
+      .item a:hover img, .item a:active img {
+	padding: 3px;
+	border: 1px outset #0000FF;
+	filter: alpha(opacity=80);
+	-moz-opacity: 0.80;
+	-khtml-opacity: 0.80;
+	opacity: 1;
+      }
+      
+      .clearfix:after{
+      clear:both;
+      }
+      #inline{
+      visibility: hidden;
+      color:#444;
+      }
+/* EndOAWidget_Instance_2648024 */
+</style>
+<link href="MI/jQuery/css/style.css" rel="stylesheet" type="text/css">
+<script type="text/xml">
+<!--
+<oa:widgets>
+  <oa:widget wid="2648024" binding="#OAWidget" />
+  <oa:widget wid="2149023" binding="#social" />
+</oa:widgets>
+-->
+</script>
+<style type="text/css">
+#uname {
+	position:absolute;
+	left:1001px;
+	top:12px;
+	width:99px;
+	height:29px;
+	z-index:11;
+}
+#logout {
+	position:absolute;
+	left:1128px;
+	top:24px;
+	width:76px;
+	height:29px;
+	z-index:12;
+}
+#apDiv3 {	position:absolute;
+	left:849px;
+	top:864px;
+	width:108px;
+	height:24px;
+	z-index:13;
+}
+#apDiv4 {
+	position:absolute;
+	left:1085px;
+	top:464px;
+	width:108px;
+	height:24px;
+	z-index:13;
+}
+#apDiv5 {	position:absolute;
+	left:1023px;
+	top:901px;
+	width:108px;
+	height:24px;
+	z-index:13;
+}
+</style>
+<link href="css/logout.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<header></header>
+<nav>
+  <ul id="MenuBar1" class="MenuBarHorizontal">
+    <li><a href="editindex.php">HOME</a></li>
+    <li><a href="editnews.php">NEWS</a></li>
+    <li><a href="editschedule.php">SCHEDULE</a>    </li>
+    <li><a href="editvideos.php">VIDEOS</a></li>
+<li><a href="editgallery.php">GALLERY</a></li>
+    <li><a href="editshop.php">SHOP</a></li>
+    <li><a href="editabout.php">ABOUT</a></li>
+  </ul>
+</nav>
+<section>
+  <h1>PHOTO  STREAM</h1>
+  <p>
+    <script type="text/javascript">
+// BeginOAWidget_Instance_2648024: #OAWidget
+/*
+      // 	ClearBox Config File (JavaScript)
+      */
+      
+      var
+      
+      // CB layout:
+      
+      CB_MinWidth=300,				// minimum (only at images) or initial width of CB window
+      CB_MinHeight=300,				// initial heigth of CB window
+      CB_WinPadd=15,					// padding of the CB window from sides of the browser 
+      CB_ImgBorder=3,					// border size around the picture in CB window
+      CB_ImgBorderColor='#FFF',			// border color around the picture in CB window
+      CB_Padd=4,					// padding around inside the CB window
+      
+      CB_BodyMarginLeft=0,				//
+      CB_BodyMarginRight=0,				// if you set margin to <body>,
+      CB_BodyMarginTop=0,				// please change these settings!
+      CB_BodyMarginBottom=0,				//
+      
+      CB_ShowThumbnails='auto',			// it tells CB how to show the thumbnails ('auto', 'always' or 'off') thumbnails are only in picture-mode!
+      CB_ThumbsBGColor='#000',			// color of the thumbnail layer
+      CB_ThumbsBGOpacity=.35,				// opacity of the thumbnail layer
+      CB_ActThumbOpacity=.65,				// thumbnail opacity of the current viewed image
+      
+      CB_SlideShowBarColor='#FFF',			// color of the slideshow bar
+      CB_SlideShowBarOpacity=.60,			// opacity of the slideshow bar
+      CB_SlideShowBarPadd=17,				// padding of the slideshow bar (left and right)
+      CB_SlideShowBarTop=2,				// position of the slideshow bar from the top of the picture
+      
+      CB_SimpleDesign='off',				// if it's 'on', CB doesn't show the frame but only the content - really nice ;)
+      
+      CB_CloseBtnTop=-10,				// vertical position of the close button in picture mode
+      CB_CloseBtnRight=-14,				// horizontal position of the close button in picture mode
+      CB_CloseBtn2Top=-20,				// vertical position of the close button in content mode
+      CB_CloseBtn2Right=-30,				// horizontal position of the close button in content mode
+      
+      CB_OSD='off',					// turns on OSD
+      CB_OSDShowReady='off',				// when clearbox is loaded and ready, it shows an OSD message
+      
+      // CB font, text and navigation (at the bottom of CB window) settings:
+      
+      CB_FontT='Verdana',				//
+      CB_FontSizeT=13,				// these variables are referring to the title or caption line
+      CB_FontColorT='#777',				// 
+      CB_FontWeightT='normal',			//
+      
+      CB_FontC='arial',				//
+      CB_FontSizeC=11,				// these variables are referring to
+      CB_FontColorC='#999',				// comment lines under the title
+      CB_FontWeightC='normal',			//
+      CB_TextAlignC='justify',			//
+      CB_txtHCMax=120,				// maximum height of the comment box in pixels
+      
+      CB_FontG='arial',				//
+      CB_FontSizeG=11,				// these variables are referring to the gallery name
+      CB_FontColorG='normal',				//
+      CB_FontWeightG='@@CB_FontWeightG@@',			//
+      
+      CB_PadT=10,					// space in pixels between the content and the title or caption line
+      
+      CB_OuterNavigation='off',			// turns outer navigation panel on
+      
+      CB_ShowURL='off',				// it shows the url of the content if no title or caption is given
+      CB_ItemNum='on',				// it shows the ordinal number of the content in galleries
+      CB_ItemNumBracket='()',				// whatever you want ;)
+      
+      CB_ShowGalName='',				// it shows gallery name
+      CB_TextNav='on',				// it shows previous and next navigation
+      CB_NavTextImgPrvNxt='on',			// it shows previous and next buttons instead of text
+      CB_ShowDL='on',					// it shows download controls
+      CB_NavTextImgDL='on',				// it shows download buttons instead of text
+      
+      CB_ImgRotation='on',				// it shows the image rotation controls
+      CB_NavTextImgRot='on',				// it shows the image rotation buttons instead of text
+      
+      // Settings of the document-hiding layer:
+      
+      CB_HideColor='#000',				// color of the layer
+      CB_HideOpacity=.8,				// opacity (0 is invisible, 1 is 100% color) of the layer
+      CB_HideOpacitySpeed=400,			// speed of fading
+      CB_CloseOnH='on',				// CB will close, if you click on background
+      
+      // CB animation settings:
+      CB_Animation='double',				// 'double', 'normal', 'off', 'grow', 'growinout' or 'warp' (high cpu usage)
+      CB_ImgOpacitySpeed=300,				// speed of content fading (in ms)
+      CB_TextOpacitySpeed=300,			// speed of text fading under the picture (in ms)
+      CB_AnimSpeed=300,				// speed of the resizing animation of CB window (in ms)
+      CB_ImgTextFade='on',				// turns on or off the fading of content and text
+      CB_FlashHide='on',				// it hides flash animations on the page before CB starts
+      CB_SelectsHide='on',				// it hides select boxes on the page before CB starts
+      CB_SlShowTime=3000,				// default speed of the slideshow (in sec)
+      CB_Preload='on',				// preload neighbour pictures in galleries
+      CB_ShowLoading='on'				// 
+      
+      
+      
+      ;
+// EndOAWidget_Instance_2648024
+    </script>
+  </p>
+  <div class="container clearfix">
+    <div class="item">
+      <form name="form1" method="post" action="updategallery.php">
+        <label for="link1"></label>
+        Path for the 1st Image: <textarea name="link1" id="link1" cols="20" rows="2"><?php $result_set= mysql_query("SELECT * 
+FROM  `gallery` 
+LIMIT 0 , 30");  
+	while($row = mysql_fetch_array($result_set))
+	{
+  		echo $row["link1"];
+	}
+	?></textarea>
+      
+    </div>
+    <div class="item"><label for="link2"></label>
+        Path for the 2nd Image: <textarea name="link2" id="link2" cols="20" rows="2"><?php $result_set= mysql_query("SELECT * 
+FROM  `gallery` 
+LIMIT 0 , 30");  
+	while($row = mysql_fetch_array($result_set))
+	{
+  		echo $row["link2"];
+	}
+	?></textarea>
+</div>
+    <div class="item"><label for="link3"></label>
+        Path for the 3rd Image: <textarea name="link3" id="link3" cols="20" rows="2"><?php $result_set= mysql_query("SELECT * 
+FROM  `gallery` 
+LIMIT 0 , 30");  
+	while($row = mysql_fetch_array($result_set))
+	{
+  		echo $row["link3"];
+	}
+	?></textarea>
+    
+</div>
+    <div class="item"><label for="link4"></label>
+        Path for the 4th Image: <textarea name="link4" id="link4" cols="20" rows="2"><?php $result_set= mysql_query("SELECT * 
+FROM  `gallery` 
+LIMIT 0 , 30");  
+	while($row = mysql_fetch_array($result_set))
+	{
+  		echo $row["link4"];
+	}
+	?></textarea>
+</div>
+    <div class="item"><label for="link5"></label>
+        Path for the 5th Image: <textarea name="link5" id="link5" cols="20" rows="2"><?php $result_set= mysql_query("SELECT * 
+FROM  `gallery` 
+LIMIT 0 , 30");  
+	while($row = mysql_fetch_array($result_set))
+	{
+  		echo $row["link5"];
+	}
+	?></textarea>
+</div>
+    <div class="item"><label for="link6"></label>
+        Path for the 6th Image: <textarea name="link6" id="link6" cols="20" rows="2"><?php $result_set= mysql_query("SELECT * 
+FROM  `gallery` 
+LIMIT 0 , 30");  
+	while($row = mysql_fetch_array($result_set))
+	{
+  		echo $row["link6"];
+	}
+	?></textarea>
+</div>
+    <div class="item"><label for="link7"></label>
+        Path for the 7th Image: <textarea name="link7" id="link7" cols="20" rows="2"><?php $result_set= mysql_query("SELECT * 
+FROM  `gallery` 
+LIMIT 0 , 30");  
+	while($row = mysql_fetch_array($result_set))
+	{
+  		echo $row["link7"];
+	}
+	?></textarea>
+</div>
+    <div class="item"><label for="link8"></label>
+        Path for the 8th Image: <textarea name="link8" id="link8" cols="20" rows="2"><?php $result_set= mysql_query("SELECT * 
+FROM  `gallery` 
+LIMIT 0 , 30");  
+	while($row = mysql_fetch_array($result_set))
+	{
+  		echo $row["link8"];
+	}
+	?></textarea>
+</div>
+    <div class="item"><label for="link9"></label>
+        Path for the 9th Image: <textarea name="link9" id="link9" cols="20" rows="2"><?php $result_set= mysql_query("SELECT * 
+FROM  `gallery` 
+LIMIT 0 , 30");  
+	while($row = mysql_fetch_array($result_set))
+	{
+  		echo $row["link9"];
+	}
+	?></textarea>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" name="updategallery" id="updategallery" value="Update Page">
+</div>
+    <div class="item"><label for="link10"></label>
+        Path for the 10th Image: <textarea name="link10" id="link10" cols="20" rows="2"><?php $result_set= mysql_query("SELECT * 
+FROM  `gallery` 
+LIMIT 0 , 30");  
+	while($row = mysql_fetch_array($result_set))
+	{
+  		echo $row["link10"];
+	}
+	?></textarea>
+</div>
+    <div class="item"><label for="link11"></label>
+        Path for the 11th Image: <textarea name="link11" id="link11" cols="20" rows="2"><?php $result_set= mysql_query("SELECT * 
+FROM  `gallery` 
+LIMIT 0 , 30");  
+	while($row = mysql_fetch_array($result_set))
+	{
+  		echo $row["link11"];
+	}
+	?></textarea>
+</div>
+    <div class="item"><label for="link12"></label>
+        Path for the 12th Image: <textarea name="link12" id="link12" cols="20" rows="2"><?php $result_set= mysql_query("SELECT * 
+FROM  `gallery` 
+LIMIT 0 , 30");  
+	while($row = mysql_fetch_array($result_set))
+	{
+  		echo $row["link12"];
+	}
+	?></textarea>
+</div>
+    
+   </form> 
+    </div>
+  <p>&nbsp;</p>
+
+</section>
+<div id="uname">
+<p> Welcome, <?php echo $_SESSION['firstname']; ?></p>
+</div>
+<div id="logout">
+<a href="logout.php"> Log Out </a>
+</div>
+<p>&nbsp;</p>
+<h1>&nbsp;</h1>
+<h1>&nbsp;</h1>
+<h1>&nbsp;</h1>
+<h2>&nbsp;</h2>
+
+<footer>
+  <br><br><br><br>
+  <div class="social"></div>
+  <script type="text/javascript">
+// BeginOAWidget_Instance_2149023: #social
+	
+	$('.social').jsocial({
+			twitter		:  'myID',
+			facebook	:  'facebook.com/myID',
+			flickr		:  '',
+			delicious	:  '',
+			linked		:  'linkedin.com/in/myID',
+			youtube		:  'youtube.com/myID',
+			feed		:  '',
+			friendfeed	:  '',
+			digg		:  '',
+			lastfm		:  '',
+			center		: false,	
+			inline		: true,
+			small		: false,
+			newPage		: true
+		});
+	
+
+// EndOAWidget_Instance_2149023
+  </script>
+  <br><br>
+    
+  <p><strong> &nbsp;&nbsp; sayipl.com &copy; 2013</strong></p>
+
+</footer>
+
+<script type="text/javascript">
+var MenuBar1 = new Spry.Widget.MenuBar("MenuBar1", {imgDown:"SpryAssets/SpryMenuBarDownHover.gif", imgRight:"SpryAssets/SpryMenuBarRightHover.gif"});
+</script>
+</body>
+</html>
+<?php
+mysql_close($con);
+?>
